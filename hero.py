@@ -3,6 +3,7 @@ from config import *
 
 class Hero():
     def __init__(self, level=1, health=100, gold=20, streight=10):
+        self.level = level
         self.health = health
         self.gold = gold
         self.streight = streight
