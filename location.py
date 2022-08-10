@@ -8,13 +8,7 @@ class Stage():
         for i in range(self.height):
             for j in range(self.width):
                 self.shape[i][j] = self.room_generation()
-        '''
-        self.loc_mirror = [['wall' for j in range(self.width + 2)] for i in range(self.height + 2)]
-        for i in range(len(self.shape)):
-            for j in range(len(self.shape[0])):
-                self.loc_mirror[i + 2][j + 2] = self.shape[i][j]
-        self.shape = self.loc_mirror.copy()
-        '''
+        self.loc_mirror = self.shape.copy()
 
     def __init__(self, name):
         self.width = STAGE_WIDTH
