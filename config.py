@@ -1,5 +1,4 @@
 import random
-
 import pygame.font
 
 pygame.init()
@@ -25,7 +24,8 @@ MAIN_WINDOW = (30, 30, 30)
 BACKGROUND = (0, 0, 0)
 FONT_COLOR = (255, 255, 255)
 INTERFACE_ELEMENTS = (255, 255, 255)
-WALL = (183, 183, 183)
+HERO = (255, 255, 255)
+WALL = (0, 0, 255)
 ENEMY_ROOM = (255, 0, 0)
 LOOT_ROOM = (255, 255, 0)
 ENEMY_AND_LOOT_ROOM = (128, 0, 128)
@@ -36,10 +36,12 @@ main_font = pygame.font.SysFont('ubuntumono', 20)
 menu_font = pygame.font.SysFont('ubuntumono', 28)
 
 # Stage
-STAGE_WIDTH = random.randint(5, 7)
-STAGE_HEIGHT = random.randint(4, 7)
+STAGE_WIDTH = 8
+STAGE_HEIGHT = 7
 
-WALL_OR_NOT = [0, 0, 0, 0, 1]
-ENEMY_OR_NOT = [0, 0, 1, 1, 1]
+START_ROOM_NUM = random.randint(0, STAGE_HEIGHT * STAGE_WIDTH - 1)
+WALL_OR_NOT = [0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+ENEMY_OR_NOT = [0, 0, 0, 0, 1, 1, 1, 1, 1, 1]
 LOOT_OR_NOT = [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]
 HEAL_OR_NOT = [0, 0, 0, 0, 0, 0, 0, 1, 1, 1]
+
